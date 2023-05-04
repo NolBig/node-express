@@ -117,4 +117,10 @@ Pour envoyer des données avec une requêtes POST, on va le faire dans l'onglet 
 </form>
 
 
+/*
+
+CRUD : Create (post : insertion), Read (get : lecture de données), Update (put/patch : modification de données), Delete (delete : suppression de données)
+
+
+*/
 

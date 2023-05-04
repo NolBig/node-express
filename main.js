@@ -39,6 +39,7 @@ server.get('/', (req, res)=>{
 // - endpoint (url)
 // - callback (fonction de rappel) 
 
+// http://localhost:3300/movies
 server.get('/movies', (req, res)=>{
 
     res.json(movies);
