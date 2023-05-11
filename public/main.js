@@ -3,8 +3,12 @@ const express = require('express');
 
 const apiRoutes = require('../routes/api.js');
 // On inclut apiRoutes qui fait référence à notre router contenant l'ensemble des routes du fichier api.js
+const cors = require('cors');
 
 const server = express(); 
+
+server.use(cors()); // On accepte toutes les origines de requête sur notre serveur.
+// /!\ Le fait d'accepter toutes les origines de requête peut être risquée.
 
 server.use(express.json());
 

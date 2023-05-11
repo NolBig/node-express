@@ -9,7 +9,7 @@ class GamesController {
             (db)=>{
 
             this.db = db;
-
+ 
         });
 
     }
@@ -41,6 +41,17 @@ class GamesController {
         
         const game = await this.db.collection('games').find({score: {$gt: 50}}).toArray();
 
+
+        res.json(game);
+    }
+
+    async getGameByRank(req, res){
+
+        const game = await this.db.collection('games').find({
+            $and: [
+                {position: {$exists: true}}
+            ]
+        }).toArray();
 
         res.json(game);
     }
